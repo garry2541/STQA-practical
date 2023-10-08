@@ -1,4 +1,5 @@
-package p8;
+package p6;
+import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,32 +8,34 @@ import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
-public class FindAllLinks {
-static String driverPath = "C:\\Users\\Usman\\503\\geckodriver.exe";
-public static void main(String[] args) {
-System.setProperty("webdriver.gecko.driver",driverPath);
-//NOTE THAT: following commented lines are required for old machines
-//DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+import org.openqa.selenium.support.ui.Select;
 
-//capabilities.setCapability("marionette",true);
-//ProfilesIni allProfiles = new ProfilesIni();
-//FirefoxProfile fp = new FirefoxProfile();
-//fp.setPreference(FirefoxProfile.PORT_PREFERENCE,"7055");
-//FirefoxOptions options = new FirefoxOptions();
-//options.setProfile(fp);
+public class pra6 {
+	static String driverPath = "\\D:\\My things\\TYCS\\STQA\\geckodriver.exe";
+	public static void main(String[] args) {
+	System.setProperty("webdriver.gecko.driver",driverPath);
+	//NOTE THAT: following commented lines are required for old machines
+	//DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 
-WebDriver driver = new FirefoxDriver();
-String appUrl ="https://www.google.co.in/";
-driver.get(appUrl);
-java.util.List<WebElement> links =
+	//capabilities.setCapability("marionette",true);
+	//ProfilesIni allProfiles = new ProfilesIni();
+	//FirefoxProfile fp = new FirefoxProfile();
+	//fp.setPreference(FirefoxProfile.PORT_PREFERENCE,"7055");
+	//FirefoxOptions options = new FirefoxOptions();
+	//options.setProfile(fp);
 
-driver.findElements(By.tagName("a"));
+	WebDriver driver = new FirefoxDriver();
+	String appUrl ="https://www.google.co.in/";
+	driver.get(appUrl);
+	java.util.List<WebElement> links =
 
-for (int i = 1; i<links.size(); i=i+1)
-{
-System.out.println(links.get(i).getText());
-}
-System.out.println("Total No. of Links: "+links.size());
-//driver.quit();
-}
-}
+	driver.findElements(By.tagName("a"));
+
+	for (int i = 1; i<links.size(); i=i+1)
+	{
+	System.out.println(links.get(i).getText());
+	}
+	System.out.println("Total No. of Links: "+links.size());
+	//driver.quit();
+	}
+	}
