@@ -1,5 +1,4 @@
-package faizan5;
-
+package p5;
 import java.io.File;
 import java.io.IOException;
 import jxl.Cell;
@@ -8,7 +7,7 @@ import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
-public class faizan5 {
+public class p5 {
 	private String inputFile;
 	public void setInputFile(String inputFile) {this.inputFile = inputFile;}
 	public void read() throws IOException {
@@ -18,14 +17,11 @@ public class faizan5 {
 	int count=0;
 	try {
 	w = Workbook.getWorkbook(inputWorkbook);
-	// Get the first sheet
 	Sheet sheet = w.getSheet(0);
-	// Loop over first 10 column and lines
 	for (int j = 0; j < sheet.getRows(); j++) {
 	for (int i = 0; i < sheet.getColumns()-1; i++) {
 	Cell cell = sheet.getCell(i, j);
 	if (cell.getType() == CellType.NUMBER) {
-
 	if(Integer.parseInt(cell.getContents())>=60){
 	flag = true;
 	if(flag == true){
@@ -35,16 +31,12 @@ public class faizan5 {
 	break;
 	}	}	}	}
 	System.out.println("Total number of students who scored more than 60 in one or more subjects: " +count);
-
 	}
 	catch (BiffException e) {e.printStackTrace();}
 	}
-
 	public static void main(String[] args) throws IOException {
-		faizan5 test = new faizan5();
-
-	test.setInputFile("Q:\\OneDrive\\Desktop\\Preliums Practical\\STQA\\Pract_4\\student.xls");
-
+		p5 test = new p5();
+	test.setInputFile("D:\\My things\\TYCS\\garrydhar\\student.xls");
 	test.read();
 	}
 }
