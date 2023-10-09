@@ -1,4 +1,4 @@
-package p6;
+package practical7;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,33 +9,22 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
 import org.openqa.selenium.support.ui.Select;
-
-public class pra6 {
-	static String driverPath = "\\D:\\My things\\TYCS\\STQA\\geckodriver.exe";
+public class prac7 {
+	static String driverPath = "D:\\My things\\TYCS\\STQA\\geckodriver.exe";
 	public static void main(String[] args) {
 	System.setProperty("webdriver.gecko.driver",driverPath);
-	//NOTE THAT: following commented lines are required for old machines
-	//DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-
-	//capabilities.setCapability("marionette",true);
-	//ProfilesIni allProfiles = new ProfilesIni();
-	//FirefoxProfile fp = new FirefoxProfile();
-	//fp.setPreference(FirefoxProfile.PORT_PREFERENCE,"7055");
-	//FirefoxOptions options = new FirefoxOptions();
-	//options.setProfile(fp);
-
 	WebDriver driver = new FirefoxDriver();
-	String appUrl ="https://www.google.co.in/";
+	String appUrl = "D:\\My things\\TYCS\\garrydhar\\index1.html"; 
 	driver.get(appUrl);
-	java.util.List<WebElement> links =
-
-	driver.findElements(By.tagName("a"));
-
-	for (int i = 1; i<links.size(); i=i+1)
+	Select oSelect = new
+	Select(driver.findElement(By.id("continents")));
+	List<WebElement> oSize = oSelect.getOptions();
+	int iListSize = oSize.size();
+	for(int i =0; i < iListSize ; i++)
 	{
-	System.out.println(links.get(i).getText());
+	String sValue = oSelect.getOptions().get(i).getText();
+	System.out.println(sValue);
 	}
-	System.out.println("Total No. of Links: "+links.size());
-	//driver.quit();
+	System.out.println("Total No. Items in Dropdown: "+iListSize);	
 	}
-	}
+}
