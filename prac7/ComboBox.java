@@ -14,7 +14,7 @@ public class prac7 {
 	public static void main(String[] args) {
 	System.setProperty("webdriver.gecko.driver",driverPath);
 	WebDriver driver = new FirefoxDriver();
-	String appUrl = "D:\\My things\\TYCS\\garrydhar\\index1.html"; 
+	String appUrl = "D:\\My things\\TYCS\\index1.html"; 
 	driver.get(appUrl);
 	Select oSelect = new
 	Select(driver.findElement(By.id("continents")));
