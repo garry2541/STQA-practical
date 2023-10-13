@@ -11,5 +11,5 @@ def count_students_with_score(input_file):
 
     print("Total number of students who scored more than 60 in one or more subjects:", count)
 
-input_file = "C:/Users/Adnan1/Downloads/TYCS/practical_exams/STQA/students.xlsx"  # Provide the correct path to your Excel file (.xlsx format)
+input_file = "C:/Users/Downloads/TYCS/practical_exams/STQA/students.xlsx"  # Provide the correct path to your Excel file (.xlsx format)
 count_students_with_score(input_file)
