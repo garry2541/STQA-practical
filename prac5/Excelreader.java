@@ -36,7 +36,7 @@ public class p5 {
 	}
 	public static void main(String[] args) throws IOException {
 		p5 test = new p5();
-	test.setInputFile("D:\\My things\\TYCS\\garrydhar\\student.xls");
+	test.setInputFile("D:\\My things\\TYCS\\student.xls");
 	test.read();
 	}
 }
