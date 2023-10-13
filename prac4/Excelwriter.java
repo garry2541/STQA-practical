@@ -12,7 +12,7 @@ public class p4 {
 
 		String sname[]={"Carls","James","Paul","Philip","Smith","Thomson","Rhodey","Stark","Gary","AnneMarie"};
 		int marks[]={50,45,60,55,70,45,67,78,89,90,30};
-		File file = new File("D:\\My things\\TYCS\\garrydhar\\student.xls");
+		File file = new File("D:\\My things\\TYCS\\student.xls");
 		WorkbookSettings wbSettings = new WorkbookSettings();
 		wbSettings.setLocale(new Locale("en", "EN"));
 		WritableWorkbook workbook = Workbook.createWorkbook(file,wbSettings);
