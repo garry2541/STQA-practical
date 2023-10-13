@@ -13,7 +13,7 @@ public class prac8 {
 	public static void main(String[] args) {
 	System.setProperty("webdriver.gecko.driver",driverPath);
 	WebDriver driver = new FirefoxDriver();
-	String appUrl ="file:D:\\My things\\TYCS\\garrydhar\\index2.html"; 
+	String appUrl ="file:D:\\My things\\TYCS\\index2.html"; 
 	driver.get(appUrl);
 	List<WebElement> checkBoxes =driver.findElements(By.xpath("//input[@type='checkbox']"));
 	int checkedCount=0, uncheckedCount=0;
